@@ -5,11 +5,11 @@ import java.util.ArrayList;
 public class Teacher {
     private int id;
     private String name;
-    private ArrayList<Integer> cursList;
-    public Teacher(int id, String name, ArrayList<Integer> cursList){
+    private ArrayList<Integer> courseList;
+    public Teacher(int id, String name, ArrayList<Integer> courseList){
         this.id = id;
         this.name = name;
-        this.cursList = cursList;
+        this.courseList = courseList;
     }
     @Override
     public String toString(){
