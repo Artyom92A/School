@@ -2,7 +2,7 @@ package gradle_app;
 
 import java.util.ArrayList;
 
-public class Student {
+public class Student implements Person {
     private int id;
     private String name;
     private ArrayList <Integer> courseList;
@@ -11,6 +11,11 @@ public class Student {
         this.id = id;
         this.name = name;
         this.courseList = courseList;
+    }
+
+    @Override
+    public String printCard() {
+        return "I am student";
     }
 
     public void setName(String name) {

@@ -14,12 +14,16 @@ public class App {
     public static void main(String[] args) {
         Student student1 = new Student(1, "Ivan", new ArrayList<Integer>());
         System.out.println(student1);
-        Teacher teacher1 =  new Teacher(1, "OlgaPetrovna", new ArrayList<>());
-        Teacher teacher2 =  new Teacher(2, "AnnaNerjjr", new ArrayList<>());
+        Teacher teacher1 =  new Teacher(1, "OlgaPetrovna", new ArrayList<>(),Specialization.MATH);
+        Teacher teacher2 =  new Teacher(2, "AnnaNerjjr", new ArrayList<>(), Specialization.ENGLISH);
         School school = new School();
         school.addTeacher(teacher1);
         school.addStudent(student1);
         school.addTeacher(teacher2);
         System.out.println(school);
+        CardPrinter cardPrinter = new CardPrinter();
+        cardPrinter.print(student1);
+        cardPrinter.print(teacher1);
+
     }
 }
