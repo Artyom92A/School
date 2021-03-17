@@ -3,13 +3,30 @@
  */
 package gradle_app;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class App {
-
+    private static void readFromCommandLine ()
+    {
+        Scanner scanner = new Scanner(System.in);
+        while (true)
+        {
+        String name = scanner.nextLine();
+                switch (name){
+            case ("add Student"):
+                System.out.println("Введите имя");
+                String studentName = scanner.nextLine();
+                Student student1 = new Student(10, studentName, new ArrayList<Integer>());
+                System.out.println(student1);
+                break;
+            case ("add Teacher"):
+                System.out.println("");
+                break;
+            default:
+                System.out.println("Введите команду");
+        }
+        }
+    }
 
     public static void main(String[] args) {
         Student student1 = new Student(1, "Ivan", new ArrayList<Integer>());
@@ -24,6 +41,7 @@ public class App {
         CardPrinter cardPrinter = new CardPrinter();
         cardPrinter.print(student1);
         cardPrinter.print(teacher1);
+        readFromCommandLine();
 
     }
 }
